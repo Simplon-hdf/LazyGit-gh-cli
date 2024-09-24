@@ -192,7 +192,7 @@ Voici quelques astuces pour utiliser Lazygit plus efficacement :
 
 ---
 
-### <span id="8-conclusion" style="color:#003366;">8. Conclusion</span> 🎯
+### Conclusion 🎯
 
 Lazygit est un outil puissant pour ceux qui souhaitent gérer leurs dépôts Git de manière plus fluide et visuelle. Il permet de gagner du temps, réduit les erreurs et simplifie les workflows Git. Bien qu’il soit toujours bon de connaître les bases de Git en ligne de commande, Lazygit offre un compromis idéal entre productivité et simplicité. Il est donc particulièrement recommandé pour les développeurs qui travaillent régulièrement avec Git et souhaitent rationaliser leur processus.
 
