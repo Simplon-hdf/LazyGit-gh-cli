@@ -1,10 +1,15 @@
-Le **GitHub CLI** (`gh`) est un outil en ligne de commande conçu pour interagir avec GitHub directement depuis ton terminal. Il permet d'effectuer des tâches GitHub courantes comme la gestion des issues, des pull requests, et la gestion des dépôts, sans avoir à ouvrir l'interface web. Voici un guide complet pour l'installer et utiliser ses différentes commandes.
+## Github CLI
+
+**Github CLI** ( command line interface ) ou **GH CLI**, est un outil en ligne de commande permettant d'interagir avec GitHub depuis le terminal. 
+Il permet d'effectuer des tâches GitHub courantes comme la gestion des issues, des pull requests, et la gestion des dépôts, sans avoir à ouvrir l'interface web. 
+Voici un guide complet pour l'installer et utiliser ses différentes commandes.
 
 ### 1. **Installation de GitHub CLI**
 
 #### Sur Linux/macOS (via Homebrew)
 
 	brew install gh
+	
 #### Sur Ubuntu/Debian (via apt)
 
 	sudo apt install gh
@@ -20,9 +25,13 @@ Ou installation via winget:
 
 ### 2. **Authentification**
 
-Avant de commencer à utiliser `gh`, tu dois t'authentifier :
+Avant de commencer à utiliser `gh CLI`, tu dois t'authentifier :
 
 	gh auth login
+
+Pour déconnecter l'utilisateur actuel de GitHub :
+
+	gh auth logout
 	
 
 ### 3. **Commandes GitHub CLI Principales**
@@ -31,38 +40,35 @@ Avant de commencer à utiliser `gh`, tu dois t'authentifier :
 
  **Cloner un dépôt** :
 
-	gh repo clone <owner>/<repo>
+	gh repo clone owner/nom-du-repo
 
-Ex : `gh repo clone octocat/Hello-World`
+> owner signifit le nom de mon compte GitHub 
 
 **Créer un dépôt** :
 
-	gh repo create <nom-du-repo> --public
+	gh repo create nom-du-nouveau-repo --public
 
-Ex : `gh repo create mon-nouveau-repo --public`
+> --public veut dire que le repo crée sera visible pour tous, sinon --private
 
 **Visualiser les informations d'un dépôt** :
 
-	gh repo view <nom-du-repo>
-	
-Ex : `gh repo view octocat/Hello-World 
+	gh repo view owner/nom-du-repo
 
 #### Gestion des Issues
 
-- **Lister les issues** :
+**Lister les issues** :
 
 	gh issue list
 	
-Cela liste toutes les issues ouvertes dans le dépôt actuel.
+> Cela liste toutes les issues ouvertes dans le dépôt actuel.
 
 **Créer une nouvelle issue** :
 
 	gh issue create
 
-
 **Voir les détails d'une issue** :
 
-	gh issue view <numéro-issue>
+	gh issue view numero-issue
 
 Ex : `gh issue view 23`
 
@@ -72,25 +78,25 @@ Ex : `gh issue view 23`
 
 	gh pr list
 
-Affiche toutes les pull requests ouvertes dans le dépôt.
+> Affiche toutes les pull requests ouvertes dans le dépôt.
 
 **Créer une pull request** :
 
 	gh pr create --base main --head feature-branch
 
-On peut ajouter des options comme `--title` ou `--body` pour donner un titre ou une description à la PR.
+> On peut ajouter des options comme `--title` ou `--body` pour donner un titre ou une description à la PR.
 
 **Vérifier les détails d'une PR** :
 
-	gh pr view <numéro-pr>
+	gh pr view numéro-pr
 	
 Ex : `gh pr view 45`
 
 **Fusionner une PR** :
 
-	gh pr merge <numéro-pr>
+	gh pr merge numéro-pr
 
-Tu peux utiliser des options comme `--squash` ou `--rebase` pour spécifier le type de merge.
+> Tu peux utiliser des options comme `--squash` ou `--rebase` pour spécifier le type de merge.
 
 **Workflow de CI/CD**
 GitHub CLI permet aussi de gérer les workflows GitHub Actions.
@@ -101,11 +107,11 @@ GitHub CLI permet aussi de gérer les workflows GitHub Actions.
 
 **Déclencher un workflow** :
 
-	gh workflow run <nom-du-workflow>
+	gh workflow run nom-du-workflow
 
 **Visualiser les logs d'un workflow :**
 
-	gh run view <id-du-run>
+	gh run view id-du-run
 
 Ex : gh run view 1234567890 --log pour voir les logs en détail.
 
@@ -117,4 +123,4 @@ Ex : gh run view 1234567890 --log pour voir les logs en détail.
 
 Créer un Gist (outil pour partager des snippets de code) :
 
-	gh gist create <nom-du-fichier> --public
+	gh gist create nom-du-fichier --public
