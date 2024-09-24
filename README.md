@@ -3,4 +3,3 @@
 1. [Documentation Lazygit](doc/Lazygit.md)
 
 2. [Documentation GitHub-CLI](doc/githubCLI.md)
-
