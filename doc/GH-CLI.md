@@ -118,3 +118,24 @@ Ex : gh run view 1234567890 --log pour voir les logs en détail.
 Créer un Gist (outil pour partager des snippets de code) :
 
 	gh gist create <nom-du-fichier> --public
+
+Ouvrir GitHub dans le navigateur pour ton dépôt actuel :
+
+	gh browse
+
+### 4. Alias
+
+Une fonctionnalité puissante de GitHub CLI est la possibilité de créer des alias pour les commandes que tu utilises fréquemment :
+
+	gh alias set co "pr checkout"
+
+Cela te permet de taper gh co <pr> au lieu de gh pr checkout.
+
+### 5. Commandes Personnalisées
+
+Tu peux même ajouter tes propres scripts personnalisés dans GitHub CLI :
+
+    Place un script dans le dossier gh sous ~/.config/ ou C:\Users\<user>\AppData\Roaming\gh\
+    Tu pourras ensuite l'appeler comme une commande native gh.
+
+
