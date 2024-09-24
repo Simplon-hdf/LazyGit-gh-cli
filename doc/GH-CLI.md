@@ -118,3 +118,7 @@ Ex : gh run view 1234567890 --log pour voir les logs en détail.
 Créer un Gist (outil pour partager des snippets de code) :
 
 	gh gist create <nom-du-fichier> --public
+
+Ouvrir GitHub dans le navigateur pour ton dépôt actuel :
+
+	gh browse

@@ -3,14 +3,7 @@
 *Lazygit est une interface utilisateur (UI) en mode texte pour Git, qui permet de gérer des dépôts Git via une interface conviviale dans le terminal. Grâce à des raccourcis clavier bien pensés, il permet de rendre plus efficace la gestion des branches, des commits, des merges, des rebases, etc.*
 
 
-
-**Lister les workflows actifs** :
-
-	gh workflow list
-
-**Déclencher un workflow** :
-
-	gh workflow run <nom-du-workflow>
+----------------------
 
 ### Table des matières 📚
 1. [Introduction à Lazygit](#1-introduction-à-lazygit)
