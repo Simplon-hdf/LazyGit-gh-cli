@@ -1,6 +1,7 @@
-## 🚀 GitHub CLI
+# 🚀 GitHub CLI
 
-**GitHub CLI** (command line interface) ou **GH CLI**, est un outil en ligne de commande permettant d'interagir avec GitHub depuis le terminal. Il permet d'effectuer des tâches GitHub courantes comme la gestion des issues, des pull requests, et la gestion des dépôts, sans avoir à ouvrir l'interface web. 
+**GitHub CLI** (command line interface) ou **GH CLI**, est un outil en ligne de commande permettant d'interagir avec GitHub depuis le terminal. 
+Il permet d'effectuer des tâches GitHub courantes comme la gestion des dépôts, des issues et des pull requests sans avoir à ouvrir l'interface web. 
 
 Voici un guide complet pour l'installer et utiliser ses différentes commandes.
 
@@ -27,147 +28,185 @@ Voici un guide complet pour l'installer et utiliser ses différentes commandes.
 7. [Commandes Personnalisées](#commandes-personnalisées)
 
 
-### 1. **Installation de GitHub CLI**
+## 1. **Installation de GitHub CLI**
 
 #### Sur Linux/macOS (via Homebrew)
 
+```
 	brew install gh
-
+```
 #### Sur Ubuntu/Debian (via apt)
 
+```
 	sudo apt install gh
+```
 
 #### Sur Windows
 
-L'installer de façon manuelle via : 
-https://github.com/cli/cli/releases/?ref=techielass.com
+Pour l'**installer** de façon **manuelle** via : 
 
-Ou installation via winget:
+> https://github.com/cli/cli/releases/?ref=techielass.com
 
+Ou **installation** via **winget**:
+
+```
 	winget install --id github.cli
+```	
 
-### 2. **Authentification**
+## 2. **Authentification**
 
-Avant de commencer à utiliser `gh CLI`, tu dois t'authentifier :
+Avant de pouvoir utiliser `GH CLI`, il faut s'**identifier** :
 
+```
 	gh auth login
+```	
 
-Pour déconnecter l'utilisateur actuel de GitHub :
+Pour **déconnecter** l'**utilisateur actuel** de **GitHub** :
 
+```
 	gh auth logout
-	
+```
 
-### 3. **Commandes GitHub CLI Principales**
+## 3.  **Commandes GitHub CLI Principales**
 
-#### Gestion des Dépôts
+### Gestion des Dépôts
 
- **Cloner un dépôt** :
+Pour **Cloner** un **dépôt** :
 
+```
 	gh repo clone owner/nom-du-repo
+```
 
-> owner signifit le nom de mon compte GitHub 
+> *owner signifit le nom de mon compte GitHub*
 
-**Créer un dépôt** :
+Pour **Créer** un **dépôt** :
 
+```
 	gh repo create nom-du-nouveau-repo --public
+```
 
-> --public veut dire que le repo crée sera visible pour tous, sinon --private
+> *--public signifit que le repo crée sera visible pour tous, sinon --private*
 
-**Visualiser les informations d'un dépôt** :
+Pour **Visualiser** les **informations** d'un **dépôt** :
 
-	gh repo view <nom-du-repo>
+```
+	gh repo view nom-du-repo
 	
 	gh repo view owner/nom-du-repo
+```
 
-  Ex : `gh repo view octocat/Hello-World`
+### Gestion des Issues
 
-#### Gestion des Issues
+Pour **Lister** les **issues** :
 
-**Lister les issues** :
-
+```
 	gh issue list
+```
 	
-> Cela liste toutes les issues ouvertes dans le dépôt actuel.
+> *Liste toutes les issues ouvertes dans le dépôt actuel*
 
-**Créer une nouvelle issue** :
+Pour **Créer** une nouvelle **issue** :
 
+```
 	gh issue create
+```
 
-**Voir les détails d'une issue** :
+Pour **Visualiser** les **détails** d'une **issue** :
 
+```
 	gh issue view numero-issue
+```
 
-Ex : `gh issue view 23`
+### Gestion des Pull Requests (PR)
 
-#### Gestion des Pull Requests
+Pour **Lister** les **PR** :
 
-**Lister les PR** :
-
+```
 	gh pr list
+```
 
-> Affiche toutes les pull requests ouvertes dans le dépôt.
+> *Affiche toutes les pull requests ouvertes dans le dépôt*
 
-**Créer une pull request** :
+Pour **Créer** une **PR** :
 
+```
 	gh pr create --base main --head feature-branch
+```
 
-> On peut ajouter des options comme `--title` ou `--body` pour donner un titre ou une description à la PR.
+> *Possible d'ajouter des options comme `--title` ou `--body` pour donner un titre ou une description à la PR*
 
-**Vérifier les détails d'une PR** :
+Pour **Vérifier** les **détails** d'une **PR** :
 
+```
 	gh pr view numéro-pr
-	
-Ex : `gh pr view 45`
+```
 
-**Fusionner une PR** :
+Pour **Fusionner** une **PR** :
 
+```
 	gh pr merge numéro-pr
+```
 
-> Tu peux utiliser des options comme `--squash` ou `--rebase` pour spécifier le type de merge.
+> *Possible d'utiliser des options comme `--squash` ou `--rebase` pour spécifier le type de merge*
 
-### 4. **Gestion des Workflows CI/CD**
+## 4. **Gestion des Workflows CI/CD**
 
-GitHub CLI permet aussi de gérer les workflows GitHub Actions.
+**GitHub CLI** permet aussi de **gérer** les **workflows GitHub Actions**
 
-**Lister les workflows actifs** :
+Pour **Lister** les **workflows actifs** :
 
+```
 	gh workflow list
+```
 
-**Déclencher un workflow** :
+Pour **Déclencher** un **workflow** :
 
+```
 	gh workflow run nom-du-workflow
+```
 
-**Visualiser les logs d'un workflow :**
+Pour **Visualiser** les **logs** d'un **workflow** :
 
+```
 	gh run view id-du-run
+```
 
-Ex : `gh run view 1234567890 --log` pour voir les logs en détail.
+> *`gh run view 1234567890 suivi de --log` pour voir les logs en détail*
 
-### 5. **Autres Commandes Utiles**
+## 5. **Autres Commandes Utiles**
 
-**Visualiser le statut de l'utilisateur connecté** :
+Pour **Visualiser** le **statut** de l'**utilisateur connecté** :
 
+```
 	gh auth status
+```
 
-**Créer un Gist (outil pour partager des snippets de code)** :
+Pour **Créer** un **Gist** (outil pour partager des snippets de code) :
 
+```
 	gh gist create nom-du-fichier --public
+```
 
-**Ouvrir GitHub dans le navigateur pour ton dépôt actuel** :
+Pour **Ouvrir GitHub** dans le **navigateur** pour ton **dépôt actuel** :
 
+```
 	gh browse
+```
 
-### 6. **Alias**
+## 6. **Alias**
 
-Une fonctionnalité puissante de GitHub CLI est la possibilité de créer des alias pour les commandes que tu utilises fréquemment :
+Une fonctionnalité puissante de **GitHub CLI** est la possibilité de **créer** des **alias** pour les commandes que tu utilises fréquemment :
 
+```
 	gh alias set co "pr checkout"
+```
 
-Cela te permet de taper `gh co <pr>` au lieu de `gh pr checkout`.
+*Ex : Permet de raccourcir la commande `gh pr checkout` en `gh co <pr>`*
 
-### 7. **Commandes Personnalisées**
+## 7. **Commandes Personnalisées**
 
-Tu peux même ajouter tes propres scripts personnalisés dans GitHub CLI :
+Il est même possible d'ajouter ses propres scripts personnalisés dans `GitHub CLI` :
 
-Place un script dans le dossier `gh` sous `~/.config/` ou `C:\Users\<user>\AppData\Roaming\gh\`  
+Placer un script dans le dossier `gh` sous `~/.config/` 
+ou `C:\Users\<user>\AppData\Roaming\gh\`  
 Tu pourras ensuite l'appeler comme une commande native `gh`.
