@@ -171,7 +171,7 @@ Pour **Visualiser** les **logs** d'un **workflow** :
 	gh run view id-du-run
 ```
 
-> *`gh run view 1234567890 suivi de --log` pour voir les logs en détail*
+> *`gh run view 1234567890` suivi de `--log` pour voir les logs en détail*
 
 ## 5. **Autres Commandes Utiles**
 
