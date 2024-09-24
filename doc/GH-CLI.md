@@ -102,3 +102,19 @@ GitHub CLI permet aussi de gérer les workflows GitHub Actions.
 **Déclencher un workflow** :
 
 	gh workflow run <nom-du-workflow>
+
+**Visualiser les logs d'un workflow :**
+
+	gh run view <id-du-run>
+
+Ex : gh run view 1234567890 --log pour voir les logs en détail.
+
+**Autres Commandes Utiles**
+
+    Visualiser le statut de l'utilisateur connecté :
+
+		gh auth status
+
+Créer un Gist (outil pour partager des snippets de code) :
+
+	gh gist create <nom-du-fichier> --public
