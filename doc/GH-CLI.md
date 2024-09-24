@@ -1,11 +1,10 @@
-## Github CLI
+## 🚀 GitHub CLI
 
-**Github CLI** ( command line interface ) ou **GH CLI**, est un outil en ligne de commande permettant d'interagir avec GitHub depuis le terminal. 
-Il permet d'effectuer des tâches GitHub courantes comme la gestion des issues, des pull requests, et la gestion des dépôts, sans avoir à ouvrir l'interface web. 
+**GitHub CLI** (command line interface) ou **GH CLI**, est un outil en ligne de commande permettant d'interagir avec GitHub depuis le terminal. Il permet d'effectuer des tâches GitHub courantes comme la gestion des issues, des pull requests, et la gestion des dépôts, sans avoir à ouvrir l'interface web. 
 
 Voici un guide complet pour l'installer et utiliser ses différentes commandes.
 
-## Sommaire
+## 📚 Sommaire
 
 1. [Installation de GitHub CLI](#installation-de-github-cli)  
    - [Sur Linux/macOS (via Homebrew)](#sur-linuxmacos-via-homebrew)  
