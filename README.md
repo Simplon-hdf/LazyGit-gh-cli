@@ -1,3 +1,5 @@
-# template-CDA-groupe-3
+# Documentation - Outils Git
 
-test
+1. [Documentation Lazygit](doc/Lazygit.md)
+
+2. [Documentation GitHub-CLI](doc/githubCLI.md)
